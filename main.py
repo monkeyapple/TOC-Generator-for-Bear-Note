@@ -4,7 +4,7 @@ url=open("testFile.html",encoding = 'utf-8', errors='ignore')
 bs=BeautifulSoup(url,'lxml')
 collectList=bs.find_all(['h1','h2','h3','h4'])
 for i in collectList:
-    if i.nmae=='h1':
+    if i.name=='h1':
         print(i.get_text())
     elif i.name=='h2':
         print(" "+i.get_text())
