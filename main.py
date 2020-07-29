@@ -1,53 +1,79 @@
 import sys
 from bs4 import BeautifulSoup
 from PyQt5.QtWidgets import QMainWindow,QMessageBox,QApplication,QFileDialog
-from uilayout import *
+from uilayout3 import *
 
 class BearTOC(QMainWindow):
     def __init__(self):
         super().__init__()
         self.ui=Ui_MainWindow()
         self.ui.setupUi(self)
-        # self.initializing()
         self.ui.htmlDir.clicked.connect(self.select_html)
         self.ui.runButton.clicked.connect(self.scraping)
         self.ui.copyAll.clicked.connect(self.selectAndCopy)
+        self.ui.checkh1.stateChanged.connect(self.asteriskAdd)
+        self.ui.checkh2.stateChanged.connect(self.asteriskAdd)
+        self.ui.checkh3.stateChanged.connect(self.asteriskAdd)
+        self.ui.checkh4.stateChanged.connect(self.asteriskAdd)
+        self.ui.checkh5.stateChanged.connect(self.asteriskAdd)
         self.htmlFilePath=('','')
         self.scrapResult=''
-
 
 # ----------------Functions------------------------
 
     def select_html(self):
         self.htmlFilePath=QFileDialog.getOpenFileName(self,'Select HTML File','/home','HTML file(*.html)')
-
         if self.htmlFilePath[0]:
             self.ui.label_htmlDir.setText(self.htmlFilePath[0])
+
+    def asteriskAdd(self):
+        self.aster1=''
+        self.aster2=''
+        self.aster3=''
+        self.aster4=''
+        self.aster5=''
+        if self.ui.checkh1.isChecked() == True:
+            self.aster1 = '*'
+        if self.ui.checkh2.isChecked() == True:
+            self.aster2 = '*'
+        if self.ui.checkh3.isChecked() == True:
+            self.aster3 = '*'
+        if self.ui.checkh4.isChecked() == True:
+            self.aster4 = '*'
+        if self.ui.checkh5.isChecked() == True:
+            self.aster5 = '*'
+
+    def textFormat(self, aster, insert, factor):
+        return '\t' * factor+aster+' '+'[' + insert + ']' + '(' + self.bearNoteUrl(insert) + ')\n'
 
     def scraping(self):
         self.ui.textBrowser.clear()
         self.scrapResult = ''
-        if self.htmlFilePath[0]!='' and len(self.ui.identifier.text())!=0:
+        self.asteriskAdd()
+        if self.htmlFilePath[0] != '' and len(self.ui.identifier.text()) != 0:
             url = open(self.htmlFilePath[0], encoding='utf-8', errors='ignore')
             bs = BeautifulSoup(url, 'html.parser')
             self.collectList = bs.find_all(['h1', 'h2', 'h3', 'h4'])
-
-            self.scrapResult="# Table of Contents\n"
+            self.scrapResult = "# Table of Contents\n"
             for i in self.collectList:
-                if i.name=='h1':
-                    insert=i.get_text()
-                    self.scrapResult+='*'+' '+'['+insert+']'+'('+self.bearNoteUrl(insert)+')\n'
-                elif i.name=='h2':
+                if i.name == 'h1':
                     insert = i.get_text()
-                    self.scrapResult+='   '+'['+insert+']'+'('+self.bearNoteUrl(insert)+')\n'
-                elif i.name=='h3':
+                    self.scrapResult+=self.textFormat(self.aster1,insert,0)
+                elif i.name == 'h2':
                     insert = i.get_text()
-                    self.scrapResult+='    '+'['+insert+']'+'('+self.bearNoteUrl(insert)+')\n'
-                elif i.name=='h4':
+                    self.scrapResult+=self.textFormat(self.aster2,insert,1)
+                elif i.name == 'h3':
                     insert = i.get_text()
-                    self.scrapResult+='     '+'['+insert+']'+'('+self.bearNoteUrl(insert)+')\n'
-            self.scrapResult +='***\n'
+                    self.scrapResult+=self.textFormat(self.aster3,insert,2)
+                elif i.name == 'h4':
+                    insert = i.get_text()
+                    self.scrapResult+=self.textFormat(self.aster4,insert,3)
+                elif i.name == 'h5':
+                    insert = i.get_text()
+                    self.scrapResult+=self.textFormat(self.aster5,insert,4)
+            self.scrapResult += '***\n'
             self.ui.textBrowser.append(self.scrapResult)
+
         else:
             QMessageBox.warning(self, 'Warning', 'identifier or html file needed!')
 
@@ -78,31 +104,3 @@ if __name__ == "__main__":
     w = BearTOC()
     w.show()
     sys.exit(app.exec())
-
-# noteID='332244'
-#
-# url=open("testFile.html",encoding = 'utf-8', errors='ignore')
-# bs=BeautifulSoup(url,'lxml')
-# collectList=bs.find_all(['h1','h2','h3','h4'])
-#
-# def bearNoteUrl(id,title):
-#     noteUrl='bear://x-callback-url/open-note?id='+id+'&header='+title
-#     return(noteUrl)
-#
-# def scraping():
-#     print('# Table of Contents')
-#     for i in collectList:
-#         if i.name=='h1':
-#             insert=i.get_text()
-#             print('*'+' '+'['+insert+']'+'('+bearNoteUrl(noteID,insert)+')')
-#         elif i.name=='h2':
-#             insert = i.get_text()
-#             print('   '+'['+insert+']'+'('+bearNoteUrl(noteID,insert)+')')
-#         elif i.name=='h3':
-#             insert = i.get_text()
-#             print('    '+'['+insert+']'+'('+bearNoteUrl(noteID,insert)+')')
-#         elif i.name=='h4':
-#             insert = i.get_text()
-#             print('     '+'['+insert+']'+'('+bearNoteUrl(noteID,insert)+')')
-#     print('***')
-# scraping()
