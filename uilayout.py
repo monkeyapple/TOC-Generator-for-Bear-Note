@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'uilayout3.ui'
+# Form implementation generated from reading ui file 'uilayout.ui'
 #
 # Created by: PyQt5 UI code generator 5.13.0
 #
@@ -13,7 +13,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(625, 780)
+        MainWindow.resize(625, 707)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         font = QtGui.QFont()
         font.setFamily("Open Sans")
@@ -27,9 +27,8 @@ class Ui_MainWindow(object):
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
-        self.gridLayout_2 = QtWidgets.QGridLayout(self.frame)
-        self.gridLayout_2.setObjectName("gridLayout_2")
         self.frame_6 = QtWidgets.QFrame(self.frame)
+        self.frame_6.setGeometry(QtCore.QRect(12, 12, 579, 97))
         self.frame_6.setMinimumSize(QtCore.QSize(0, 0))
         self.frame_6.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.frame_6.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -87,8 +86,8 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addItem(spacerItem)
         self.verticalLayout_3.addLayout(self.horizontalLayout)
         self.gridLayout.addLayout(self.verticalLayout_3, 0, 0, 1, 1)
-        self.gridLayout_2.addWidget(self.frame_6, 0, 0, 1, 1)
         self.frame_3 = QtWidgets.QFrame(self.frame)
+        self.frame_3.setGeometry(QtCore.QRect(12, 116, 549, 506))
         self.frame_3.setMinimumSize(QtCore.QSize(0, 0))
         self.frame_3.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -180,18 +179,14 @@ class Ui_MainWindow(object):
         self.textBrowser.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.textBrowser.setObjectName("textBrowser")
         self.verticalLayout_2.addWidget(self.textBrowser)
-        self.gridLayout_2.addWidget(self.frame_3, 1, 0, 1, 1)
+        self.gitLink = QtWidgets.QLabel(self.frame_3)
+        self.gitLink.setMinimumSize(QtCore.QSize(110, 0))
+        self.gitLink.setMaximumSize(QtCore.QSize(110, 16777215))
+        self.gitLink.setOpenExternalLinks(True)
+        self.gitLink.setObjectName("gitLink")
+        self.verticalLayout_2.addWidget(self.gitLink)
         self.gridLayout_7.addWidget(self.frame, 0, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 625, 26))
-        font = QtGui.QFont()
-        font.setFamily("Open Sans")
-        self.menubar.setFont(font)
-        self.menubar.setObjectName("menubar")
-        self.menuAbout = QtWidgets.QMenu(self.menubar)
-        self.menuAbout.setObjectName("menuAbout")
-        MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         font = QtGui.QFont()
         font.setFamily("Open Sans")
@@ -200,8 +195,6 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
         self.actionMenu = QtWidgets.QAction(MainWindow)
         self.actionMenu.setObjectName("actionMenu")
-        self.menuAbout.addAction(self.actionMenu)
-        self.menubar.addAction(self.menuAbout.menuAction())
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -226,7 +219,7 @@ class Ui_MainWindow(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Open Sans\'; font-size:9.07563pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:9.07563pt;\"><br /></p></body></html>"))
-        self.menuAbout.setTitle(_translate("MainWindow", "about"))
+        self.gitLink.setText("<a href=\"https://github.com/monkeyapple/Bear-TOC/\">@MonkeyApple</a>")
         self.actionMenu.setText(_translate("MainWindow", "@MonkeyApple"))
 
 
