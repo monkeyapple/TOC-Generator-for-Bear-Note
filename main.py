@@ -1,7 +1,8 @@
 import sys
+import webbrowser
 from bs4 import BeautifulSoup
 from PyQt5.QtWidgets import QMainWindow,QMessageBox,QApplication,QFileDialog
-from uilayout3 import *
+from uilayout import *
 
 class BearTOC(QMainWindow):
     def __init__(self):
@@ -16,10 +17,13 @@ class BearTOC(QMainWindow):
         self.ui.checkh3.stateChanged.connect(self.asteriskAdd)
         self.ui.checkh4.stateChanged.connect(self.asteriskAdd)
         self.ui.checkh5.stateChanged.connect(self.asteriskAdd)
+        self.ui.actionMenu.triggered.connect(self.openPage)
         self.htmlFilePath=('','')
         self.scrapResult=''
 
 # ----------------Functions------------------------
+    def openPage(self):
+        webbrowser.open('https://github.com/monkeyapple/Bear-TOC')
 
     def select_html(self):
         self.htmlFilePath=QFileDialog.getOpenFileName(self,'Select HTML File','/home','HTML file(*.html)')
