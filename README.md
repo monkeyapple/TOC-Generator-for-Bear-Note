@@ -13,7 +13,7 @@ V1.0
 * PyQt5==5.15.0
 
 ## User Interface
-![Screenshot](/images/Image02.png)
+![Screenshot](/images/Image08.png)
 ![Screenshot](/images/Image03.png)
 
 ## How to use
