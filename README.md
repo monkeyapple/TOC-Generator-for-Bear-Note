@@ -28,7 +28,7 @@ V1.0
 
 ## Install and Run
 * **Option1:** download and run executable files in **/dist** folder (for Mac and Windows Users)
-* **Option2:** run **main.py** source codes in this repository 
+* **Option2:** download and run **main.py** 
 
 
 ## License
