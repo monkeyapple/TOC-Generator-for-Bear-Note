@@ -14,7 +14,6 @@ V1.0
 
 ## User Interface
 ![Screenshot](/images/Image08.png)
-![Screenshot](/images/Image03.png)
 
 ## How to use
 1. Copy Note's Identifier: Bear Note-->Menu-->Note-->Copy Note's Identifier
@@ -23,6 +22,7 @@ V1.0
 4. (optional) Customize asterisk before Headings
 5. Run and Copy generated TOC, then paste into Bear Note
 ![Screenshot](/images/Image04.png)
+![Screenshot](/images/Image03.png)
 
 ## Install and Run
 * **Option1:** download and run executable files in **/dist** folder
