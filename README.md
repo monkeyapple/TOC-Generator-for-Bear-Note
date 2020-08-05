@@ -30,6 +30,7 @@ V1.0
 **Option1:** download and run executable files(Mac or Windows) in **/dist** folder
 
 *For Mac Users, firstly **unzip** the file, then double click.
+
 *There will be an alert in a pop-up window shown as:
 ![Screenshot](/images/Image09.png)
 *Solution:System Preferences-->Security & Privacy-->General-->Open Anyway
