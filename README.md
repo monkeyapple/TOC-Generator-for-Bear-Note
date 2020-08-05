@@ -29,9 +29,7 @@ V1.0
 ## Install and Run
 **Option1:** download and run executable files(Mac or Windows) in **/dist** folder
 
-*For Mac Users, firstly **unzip** the file, then double click.
-
-*a pop-up dialog box with message shown as:
+*For Mac Users, firstly **unzip** the file, double click and a pop-up dialog box with message shown as:
 ![Screenshot](/images/Image09.png)
 *Solution:System Preferences-->Security & Privacy-->General-->Open Anyway
 
