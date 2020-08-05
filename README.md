@@ -5,7 +5,7 @@ TOC-Generator is a tool for generating TOC(Table of contents) for Bear Note user
 V1.0
 
 ### V1.0 Functionalities
-* Generate Markdown TOC(Table of contents) for Bear Note
+* Generate Markdown TOC(Table of contents) for Bear Note (with Jump links)
 * Customize the position of points in unordered list 
   
 ## Requirements
