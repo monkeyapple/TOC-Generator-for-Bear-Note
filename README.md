@@ -31,7 +31,7 @@ V1.0
 
 *For Mac Users, firstly **unzip** the file, then double click.
 
-*There will be an alert in a pop-up window shown as:
+*a pop-up dialog box with message shown as:
 ![Screenshot](/images/Image09.png)
 *Solution:System Preferences-->Security & Privacy-->General-->Open Anyway
 
