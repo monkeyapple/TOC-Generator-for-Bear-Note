@@ -28,9 +28,11 @@ V1.0
 
 ## Install and Run
 * **Option1:** download and run executable files(Mac or Windows) in **/dist** folder
-> For Mac User, after downloading, firstly **unzip** the file, then Double click and execute: 
+
+*For Mac User, after downloading, firstly **unzip** the file, then double click.
+*see an alert in a pop-up window as:
 ![Screenshot](/images/Image09.png)
-Solution:System Preferences-->Security & Privacy-->General-->Open Anyway
+*Solution:System Preferences-->Security & Privacy-->General-->Open Anyway
 
 * **Option2:** download all necessary souce code files and run **main.py** 
 
