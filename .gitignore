@@ -1,2 +1,5 @@
 *.html
-
+/venv
+*.ui
+*.spec
+/build
