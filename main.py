@@ -48,7 +48,7 @@ class BearTOC(QMainWindow):
             self.aster5 = '*'
 
     def textFormat(self, aster, insert, factor):
-        return '\t' * factor+aster+' '+'[' + insert + ']' + '(' + self.bearNoteUrl(insert) + ')\n'
+        return '\t' * factor+aster+' '+ insert + '(' + self.bearNoteUrl(insert) + ')\n'
 
     def scraping(self):
         self.ui.textBrowser.clear()
