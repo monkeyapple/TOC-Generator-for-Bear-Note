@@ -3,3 +3,5 @@
 *.ui
 *.spec
 /build
+/.idea
+.DS_Store
