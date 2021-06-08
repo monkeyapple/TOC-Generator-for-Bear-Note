@@ -4,13 +4,32 @@ TOC-Generator is a tool for generating TOC(Table of contents) for Bear Note user
 ## Current Version
 V1.0
 
+## Update
+* fix bug June 8 2021 (remove square brackets in the outputs)
+
 ### V1.0 Functionalities
 * Generate Markdown TOC(Table of contents) for Bear Note (with Jump links)
 * Customize the position of points in unordered list 
   
-## Requirements
-* beautifulsoup4==4.9.1
-* PyQt5==5.15.0
+
+## How to Install & Run
+* Clone or download the git repository
+```
+$ git clone https://github.com/monkeyapple/TOC-Generator-for-Bear-Note.git
+```
+* Create and activate a virtual environment:
+```
+$ virtualenv venv
+$ source venv/bin/activate
+```
+* Install the requirements inside the app folder
+```
+$ pip install -r requirements.txt
+```
+* Run the main.py file
+```
+$ python main.py
+```
 
 ## User Interface
 ![Screenshot](/images/Image08.png)
@@ -25,15 +44,6 @@ V1.0
 
 **Example of result**
 ![Screenshot](/images/Image03.png)
-
-## Install and Run
-**Option1:** download and run executable files(Mac or Windows) in **/dist** folder
-
-*For Mac Users, firstly **unzip** the file, double click and a pop-up dialog box with message shown as:
-![Screenshot](/images/Image09.png)
-*Solution:System Preferences-->Security & Privacy-->General-->Open Anyway
-
-**Option2:** download all necessary souce code files and run **main.py** 
 
 
 ## License
