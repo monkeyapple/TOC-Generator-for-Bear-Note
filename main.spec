@@ -1,10 +1,11 @@
 # -*- mode: python ; coding: utf-8 -*-
 
+
 block_cipher = None
 
 
 a = Analysis(['main.py'],
-             pathex=['/Users/effyhou/Documents/Coding/Bear-TOC'],
+             pathex=['/Users/effyhou/Documents/Coding/GitHub/Project/TOC-Generator-for-Bear-Note'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -21,7 +22,7 @@ exe = EXE(pyz,
           a.scripts,
           [],
           exclude_binaries=True,
-          name='TOC Generator',
+          name='main',
           debug=False,
           bootloader_ignore_signals=False,
           strip=False,
@@ -34,9 +35,8 @@ coll = COLLECT(exe,
                strip=False,
                upx=True,
                upx_exclude=[],
-               name='TOC Generator')
+               name='main')
 app = BUNDLE(coll,
-             name='TOC Generator.app',
+             name='main.app',
              icon=None,
-             bundle_identifier=None,
-             info_plist={'NSHighResolutionCapable': 'True'},)
+             bundle_identifier=None)
