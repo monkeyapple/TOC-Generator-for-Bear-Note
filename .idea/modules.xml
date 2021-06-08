@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Bear-TOC.iml" filepath="$PROJECT_DIR$/.idea/Bear-TOC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/TOC-Generator-for-Bear-Note.iml" filepath="$PROJECT_DIR$/.idea/TOC-Generator-for-Bear-Note.iml" />
     </modules>
   </component>
 </project>
