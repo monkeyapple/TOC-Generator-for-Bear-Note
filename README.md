@@ -24,7 +24,7 @@ $ source venv/bin/activate
 ```
 $ pip install -r requirements.txt
 ```
-* Run the main.py file
+* Run
 ```
 $ python main.py
 ```
