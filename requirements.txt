@@ -1,4 +1,8 @@
+altgraph==0.17
 beautifulsoup4==4.9.3
+macholib==1.14
+pyinstaller==4.3
+pyinstaller-hooks-contrib==2021.1
 PyQt5==5.15.4
 PyQt5-Qt5==5.15.2
 PyQt5-sip==12.9.0
